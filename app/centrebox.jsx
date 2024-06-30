@@ -250,7 +250,7 @@ const Page = () => {
             {chemistry && <div ref={chemistry1} className='  h-screen flex bg-white  items-center justify-center  '>
                 <div className='m-10   border drop-shadow-md   w-4/5 h-4/5  hide-scrollbar overflow-scroll flex flex-col items-center bg-[#f7f7f7]  p-3'>
 
-                   <div> <div className='text-sm font-semibold m-2 font-serif '>MATHEMARICS</div>
+                   <div> <div className='text-sm font-semibold m-2 font-serif '>MATHEMATICS</div>
                     <div className='flex m-2 gap-4'>
                         <div className='sm:flex sm:justify-around sm:align-middle'><div>
                             <input type="text" ref={refi110}  placeholder='Internal marks' className='border text-[10px] sm:w-[100%] border-black px-4 py-2' />
