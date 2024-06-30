@@ -16,25 +16,36 @@ const Navbar = () => {
   const hide=()=>{
     ref.current.style.display="none";
   }
-  const github=()=>{
+  const github_deekshi=()=>{
     window.location.href="https://github.com/Deekshigowda08";
   }
-  const insta=()=>{
-    window.location.href="https://www.instagram.com/_deekshith_gowda_08?utm_source=qr&igsh=eDc1eGN6NnVvMWxo";
+  const github_gagan=()=>{
+    window.location.href="https://github.com/Gagan-poojari";
   }
-  const linkedin=()=>{
+  const insta_deekshi=()=>{
+    window.location.href="https://www.instagram.com/__deekshith_gowda__08?igsh=eWlyNWZiZGt3Z2Fi";
+  }
+  const linkedin_deekshi=()=>{
+    window.location.href="https://www.linkedin.com/in/deekshith-gowda-019b56305?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app";
+  }
+  const insta_gagan=()=>{
+    window.location.href="https://www.instagram.com/gagan__poojari?igsh=MTd4M2RmZHlhaDExag==";
+  }
+  const linkedin_gagan=()=>{
     window.location.href="https://www.linkedin.com/in/deekshith-gowda-019b56305?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app";
   }
   const refresh=()=>{
     window.location.reload();
   }
   return (
-   <div>
-    <div className='bg-indigo-700 w-screen  py-[2%] align-middle md:justify-between sm:justify-center md:px-5  fixed top-0 text-white flex'>
-       <button onClick={display} className='fixed top-4 left-5 md:hidden '><IoMenu/></button> 
-   <div className='text-xl font-bold  '>SGPA Calculator</div>
-   <div>
-    <ul className='flex gap-8 list-disc'>
+   <div >
+    <div className='w-[98%] m-4   fixed top-0   justify-between text-black font-serif flex'>
+       <div className='flex gap-4'><div className='text-5xl font-semibold '>SGPA</div>
+       <div className='text-xl font-semibold  flex pt-5'>CALCULATOR</div>
+       </div>
+       <button onClick={display} className='fixed top-4 right-5 md:hidden p-5 '><IoMenu/></button> 
+   <div className='sm:hidden md:block flex p-5'>
+    <ul className='flex  gap-8  list-disc'>
         <li className='cursor-pointer hidden md:block'><button onClick={refresh}>Home</button></li>
         <li className='cursor-pointer hidden md:block'><Link href="https://drive.google.com/drive/folders/1--yy6YZDHZLS4IBTn5VVAWTy3ZqJTxXn">Question paper</Link></li>
         <li className='cursor-pointer hidden md:block'><Link href="https://drive.google.com/drive/folders/1KeULV3o_DqNCDdEMIfuucISjOR-RKsbF">Notes</Link></li>
@@ -43,20 +54,28 @@ const Navbar = () => {
     </ul>
    </div>
     </div>
-    <div ref={ref} className='sm:p-10 sm:fixed hidden delay-200 sm:bg-indigo-700 sm:w-[70%] sm:h-[50%]  sm:justify-center sm:pt-20'>
-      <button onClick={hide} className='text-white size-7 fixed top-5 left-5'><AiOutlineClose /></button>
-    <ul >
-        <li className=' sm:text-2xl font-bold text-white cursor-pointer'><button onClick={refresh}>Home</button></li>
-        <li className=' sm:text-2xl font-bold text-white cursor-pointer'><Link href="https://drive.google.com/drive/folders/1--yy6YZDHZLS4IBTn5VVAWTy3ZqJTxXn">Question paper</Link></li>
-        <li className=' sm:text-2xl font-bold text-white cursor-pointer'><Link href="https://drive.google.com/drive/folders/1KeULV3o_DqNCDdEMIfuucISjOR-RKsbF">Notes</Link></li>
-        <li className=' sm:text-2xl font-bold text-white cursor-pointer'><Link href="https://uucms.karnataka.gov.in/Login/Index_Eng">UUCMS</Link></li>
-        <li className=' sm:text-2xl font-bold text-white cursor-pointer'><Link href="https://uvce.ac.in/">UVCE Official</Link></li>
+    <div ref={ref} className='sm:fixed  z-10 top-0 right-0 md:hidden hidden delay-1000 sm:bg-white sm:w-[70%] sm:h-[50%]  sm:justify-center sm:pt-12'>
+      <button onClick={hide} className='text-black  sm:fixed top-5 right-5'><AiOutlineClose /></button>
+    <ul className='flex flex-col' >
+        <li className=' sm:text-md text-center p-4 font-serif w-full font-semibold text-black cursor-pointer border drop-shadow-md bg-white'><button onClick={refresh}>Home</button></li>
+        <li className=' sm:text-md text-center p-4 font-serif  w-full font-semibold text-black cursor-pointer border drop-shadow-md bg-white'><Link href="https://drive.google.com/drive/folders/1--yy6YZDHZLS4IBTn5VVAWTy3ZqJTxXn">Question paper</Link></li>
+        <li className=' sm:text-md text-center p-4 font-serif w-full font-semibold text-black cursor-pointer border drop-shadow-md bg-white'><Link href="https://drive.google.com/drive/folders/1KeULV3o_DqNCDdEMIfuucISjOR-RKsbF">Notes</Link></li>
+        <li className=' sm:text-md text-center p-4 font-serif w-full font-semibold text-black cursor-pointer border drop-shadow-md bg-white'><Link href="https://uucms.karnataka.gov.in/Login/Index_Eng">UUCMS</Link></li>
+        <li className=' sm:text-md text-center p-4 font-serif w-full font-semibold text-black cursor-pointer border drop-shadow-md bg-white'><Link href="https://uvce.ac.in/">UVCE Official</Link></li>
     </ul>
-    <div className='flex justify-around bottom-[30%] text-white size-56 fixed'>
-      <div><button onClick={insta}><FaInstagram /></button></div>
-      <div><button onClick={linkedin}><FaLinkedin /></button></div>
-      <div><button onClick={github}><FaGithub /></button></div>
-   
+    <div className=' p-2 border drop-shadow-md bg-white text-black w-full '>
+      <div className='text-[10px] font-serif font-semibold'>Devoloped by</div>
+      <div className="flex justify-around p-1 bg-white text-black w-full">
+      <div><button onClick={insta_deekshi}><FaInstagram /></button></div>
+      <div><button onClick={linkedin_deekshi}><FaLinkedin /></button></div>
+      <div><button onClick={github_deekshi}><FaGithub /></button></div></div>
+    </div>
+    <div className=' p-2 border drop-shadow-md bg-white text-black w-full '>
+      <div className='text-[10px] font-serif font-semibold'>Designed by</div>
+      <div className="flex justify-around p-1 bg-white text-black w-full">
+      <div><button onClick={insta_gagan}><FaInstagram /></button></div>
+      <div><button onClick={linkedin_gagan}><FaLinkedin /></button></div>
+      <div><button onClick={github_gagan}><FaGithub /></button></div></div>
     </div>
    </div>
   </div>

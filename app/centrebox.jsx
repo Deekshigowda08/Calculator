@@ -1,46 +1,25 @@
 "use client"
 import React from 'react'
-import {useState,useRef } from 'react'
+import { useState, useRef } from 'react'
 
-    
+
 const Page = () => {
-  const sub = useRef();
-  const tohide = useRef();
-  const [formData, setformData] = useState(0);
-  const [chemistry, setchemistry] = useState(false);
-  const [physics, setphysics] = useState(false);
-  const chemistry1 = useRef();
-  let handlechange=()=>{
-     if (sub.current.value==="Chemistry"||sub.current.value==='chemistry'||sub.current.value==="Chemistry ") {
-             setchemistry(true)
-             tohide.current.style.display="none";
-     }
-     else if (sub.current.value==="Physics"||sub.current.value==='physics'||sub.current.value==="Physics ") {
-        setphysics(true)
-             tohide.current.style.display="none";
-     }
-     else{
-        window.location.reload();
-     }
-     }
-     const refi1 = useRef()
-    const refi2 = useRef()
-    const refi3 = useRef()
-    const refi4 = useRef()
-    const refi5 = useRef()
-    const refi6 = useRef()
-    const refi7 = useRef()
-    const refi8 = useRef()
-    const refi9 = useRef()
-    const refe1 = useRef()
-    const refe2 = useRef()
-    const refe3 = useRef()
-    const refe4 = useRef()
-    const refe5 = useRef()
-    const refe6 = useRef()
-    const refe7 = useRef()
-    const refe8 = useRef()
-    const refe9 = useRef()
+    const [note, setnote] = useState(false)
+    const tohide = useRef();
+    const [formData, setformData] = useState(0);
+    const [chemistry, setchemistry] = useState(false);
+    const [physics, setphysics] = useState(false);
+    const chemistry1 = useRef();
+    const physics1=useRef();
+    let chemistry88 = () => {
+            setchemistry(true)
+            tohide.current.style.display = "none";
+        }
+    let physics88 = () => {    
+          setphysics(true)
+            tohide.current.style.display = "none";
+      
+    }
     const refi11 = useRef()
     const refi21 = useRef()
     const refi31 = useRef()
@@ -57,8 +36,8 @@ const Page = () => {
     const refe510 = useRef()
     const refe610 = useRef()
     const refe710 = useRef()
-    const refe810= useRef()
-    const refe910= useRef()
+    const refe810 = useRef()
+    const refe910 = useRef()
     const refi110 = useRef()
     const refi210 = useRef()
     const refi310 = useRef()
@@ -75,543 +54,448 @@ const Page = () => {
     const refe51 = useRef()
     const refe61 = useRef()
     const refe71 = useRef()
-    const refe81= useRef()
-    const refe91= useRef()
-    const red = useRef();
+    const refe81 = useRef()
+    const refe91 = useRef()
     const red1 = useRef()
     const red2 = useRef()
 
-    const HandleChange = () => {
-        
-        const check=(((Math.ceil((parseInt(refi1.current.value) + parseInt((refe1.current.value / 2))) / 10) * 3) + (Math.ceil((parseInt(refi2.current.value) + parseInt((refe2.current.value / 2))) / 10) * 3) + (Math.ceil((parseInt(refi3.current.value) + parseInt((refe3.current.value / 2))) / 10) * 3) + (Math.ceil((parseInt(refi4.current.value) + parseInt((refe4.current.value / 2))) / 10) * 3) + (Math.ceil((parseInt(refi5.current.value) + parseInt((refe5.current.value / 2))) / 10)) + (Math.ceil((parseInt(refi6.current.value) + parseInt((refe6.current.value / 2))) / 10)) + (Math.ceil((parseInt(refi7.current.value) + parseInt((refe7.current.value / 2))) / 10)) + (Math.ceil((parseInt(refi8.current.value) + parseInt((refe8.current.value / 2))) / 10) * 2) + (Math.ceil((parseInt(refi9.current.value) + parseInt((refe9.current.value / 2))) / 10) * 3)) / 20);
- 
-        if (check>0 && check<=10) {
-            setformData(((Math.ceil((parseInt(refi1.current.value) + parseInt((refe1.current.value / 2))) / 10) * 3) + (Math.ceil((parseInt(refi2.current.value) + parseInt((refe2.current.value / 2))) / 10) * 3) + (Math.ceil((parseInt(refi3.current.value) + parseInt((refe3.current.value / 2))) / 10) * 3) + (Math.ceil((parseInt(refi4.current.value) + parseInt((refe4.current.value / 2))) / 10) * 3) + (Math.ceil((parseInt(refi5.current.value) + parseInt((refe5.current.value / 2))) / 10)) + (Math.ceil((parseInt(refi6.current.value) + parseInt((refe6.current.value / 2))) / 10)) + (Math.ceil((parseInt(refi7.current.value) + parseInt((refe7.current.value / 2))) / 10)) + (Math.ceil((parseInt(refi8.current.value) + parseInt((refe8.current.value / 2))) / 10) * 2) + (Math.ceil((parseInt(refi9.current.value) + parseInt((refe9.current.value / 2))) / 10) * 3)) / 20);
-        chemistry1.current.style.display="none";
+    const HandleChange_chemistry_submit = () => {
+        let math_total,chemistry_lab_total,chemistry_total,pps_lab_total,pps_total,dti_total,workshop_total,electronics_total,mechanical_total;
+        if (parseInt(refi110.current.value)==50 && parseInt(refe110.current.value)==50) {
+            math_total=parseInt((parseInt(refi110.current.value)+parseInt(refe110.current.value))/10)
+        }else if(parseInt(refi110.current.value)<20 || refi110.current.value==""  || parseInt(refe110.current.value)<20 || refe110.current.value=="" ){
+            math_total=0;
         }
         else{
-            red.current.style.backgroundColor="red";
+            math_total=parseInt((parseInt(refi110.current.value)+parseInt(refe110.current.value))/10)+1
         }
-          }
-    const HandleChange1 = () => {
-        const check=(((Math.ceil((parseInt(refi11.current.value) + parseInt((refe11.current.value / 2))) / 10) * 3) + (Math.ceil((parseInt(refi21.current.value) + parseInt((refe21.current.value / 2))) / 10) * 3) + (Math.ceil((parseInt(refi31.current.value) + parseInt((refe31.current.value / 2))) / 10) * 3) + (Math.ceil((parseInt(refi41.current.value) + parseInt((refe41.current.value / 2))) / 10) * 3) + (Math.ceil((parseInt(refi51.current.value) + parseInt((refe51.current.value / 2))) / 10)) + (Math.ceil((parseInt(refi61.current.value) + parseInt((refe61.current.value / 2))) / 10)) + (Math.ceil((parseInt(refi71.current.value) + parseInt((refe71.current.value / 2))) / 10)) + (Math.ceil((parseInt(refi81.current.value) + parseInt((refe81.current.value / 2))) / 10) * 2) + (Math.ceil((parseInt(refi91.current.value) + parseInt((refe91.current.value / 2))) / 10) * 3)) / 20);
- 
-        if (check>0 && check<=10) {
-            setformData(((Math.ceil((parseInt(refi11.current.value) + parseInt((refe11.current.value / 2))) / 10) * 3) + (Math.ceil((parseInt(refi21.current.value) + parseInt((refe21.current.value / 2))) / 10) * 3) + (Math.ceil((parseInt(refi31.current.value) + parseInt((refe31.current.value / 2))) / 10) * 3) + (Math.ceil((parseInt(refi41.current.value) + parseInt((refe41.current.value / 2))) / 10) * 3) + (Math.ceil((parseInt(refi51.current.value) + parseInt((refe51.current.value / 2))) / 10)) + (Math.ceil((parseInt(refi61.current.value) + parseInt((refe61.current.value / 2))) / 10)) + (Math.ceil((parseInt(refi71.current.value) + parseInt((refe71.current.value / 2))) / 10)) + (Math.ceil((parseInt(refi81.current.value) + parseInt((refe81.current.value / 2))) / 10) * 2) + (Math.ceil((parseInt(refi91.current.value) + parseInt((refe91.current.value / 2))) / 10) * 3)) / 20);
-            chemistry1.current.style.display="none"; 
+        if (parseInt(refi210.current.value)==50 && parseInt(refe210.current.value)==50) {
+            chemistry_total=parseInt((parseInt(refi210.current.value)+parseInt(refe210.current.value))/10)
+        }else if(parseInt(refi210.current.value)<20 || refi210.current.value==""  || parseInt(refe210.current.value)<20 || refe210.current.value=="" ){
+            chemistry_total=0;
         }
         else{
-            red2.current.style.backgroundColor="red";
+            chemistry_total=parseInt((parseInt(refi210.current.value)+parseInt(refe210.current.value))/10)+1
         }
-        
-                   }
-    const HandleChange75=()=>{
-           
-        const check=(((Math.ceil((parseInt(refi1.current.value) + parseInt((refe1.current.value / 2))) / 10) * 3) + (Math.ceil((parseInt(refi2.current.value) + parseInt((refe2.current.value / 2))) / 10) * 3) + (Math.ceil((parseInt(refi3.current.value) + parseInt((refe3.current.value / 2))) / 10) * 3) + (Math.ceil((parseInt(refi4.current.value) + parseInt((refe4.current.value / 2))) / 10) * 3) + (Math.ceil((parseInt(refi5.current.value) + parseInt((refe5.current.value / 2))) / 10)) + (Math.ceil((parseInt(refi6.current.value) + parseInt((refe6.current.value / 2))) / 10)) + (Math.ceil((parseInt(refi7.current.value) + parseInt((refe7.current.value))) / 10)) + (Math.ceil((parseInt(refi8.current.value) + parseInt((refe8.current.value / 2))) / 10) * 2) + (Math.ceil((parseInt(refi9.current.value) + parseInt((refe9.current.value / 2))) / 10) * 3)) / 20);
- 
-        if (check>0 && check<=10) {
-            setformData(((Math.ceil((parseInt(refi1.current.value) + parseInt((refe1.current.value / 2))) / 10) * 3) + (Math.ceil((parseInt(refi2.current.value) + parseInt((refe2.current.value / 2))) / 10) * 3) + (Math.ceil((parseInt(refi3.current.value) + parseInt((refe3.current.value / 2))) / 10) * 3) + (Math.ceil((parseInt(refi4.current.value) + parseInt((refe4.current.value / 2))) / 10) * 3) + (Math.ceil((parseInt(refi5.current.value) + parseInt((refe5.current.value / 2))) / 10)) + (Math.ceil((parseInt(refi6.current.value) + parseInt((refe6.current.value / 2))) / 10)) + (Math.ceil((parseInt(refi7.current.value) + parseInt((refe7.current.value))) / 10)) + (Math.ceil((parseInt(refi8.current.value) + parseInt((refe8.current.value / 2))) / 10) * 2) + (Math.ceil((parseInt(refi9.current.value) + parseInt((refe9.current.value / 2))) / 10) * 3)) / 20);
-        chemistry1.current.style.display="none";
+        if (parseInt(refi310.current.value)==50 && parseInt(refe310.current.value)==50) {
+            electronics_total=parseInt((parseInt(refi310.current.value)+parseInt(refe310.current.value))/10)
+        }else if(parseInt(refi310.current.value)<20 || refi310.current.value==""  || parseInt(refe310.current.value)<20 || refe310.current.value=="" ){
+            electronics_total=0;
         }
         else{
-            red.current.style.backgroundColor="red";
+            electronics_total=parseInt((parseInt(refi310.current.value)+parseInt(refe310.current.value))/10)+1
         }
-    }  
-    const HandleChange34 = () => {
-        const check=(((Math.ceil((parseInt(refi110.current.value) + parseInt((refe110.current.value / 2))) / 10) * 3) + (Math.ceil((parseInt(refi210.current.value) + parseInt((refe210.current.value / 2))) / 10) * 3) + (Math.ceil((parseInt(refi310.current.value) + parseInt((refe310.current.value / 2))) / 10) * 3) + (Math.ceil((parseInt(refi410.current.value) + parseInt((refe410.current.value / 2))) / 10) * 3) + (Math.ceil((parseInt(refi510.current.value) + parseInt((refe510.current.value / 2))) / 10)) + (Math.ceil((parseInt(refi610.current.value) + parseInt((refe610.current.value / 2))) / 10)) + (Math.ceil((parseInt(refi710.current.value) + parseInt((refe710.current.value / 2))) / 10)) + (Math.ceil((parseInt(refi810.current.value) + parseInt((refe810.current.value / 2))) / 10) * 2) + (Math.ceil((parseInt(refi910.current.value) + parseInt((refe910.current.value))) / 10) * 3)) / 20);
-        console.log(check);
-        if (check>0 && check<=10) {
-            setformData(((Math.ceil((parseInt(refi110.current.value) + parseInt((refe110.current.value / 2))) / 10) * 3) + (Math.ceil((parseInt(refi210.current.value) + parseInt((refe210.current.value / 2))) / 10) * 3) + (Math.ceil((parseInt(refi310.current.value) + parseInt((refe310.current.value / 2))) / 10) * 3) + (Math.ceil((parseInt(refi410.current.value) + parseInt((refe410.current.value / 2))) / 10) * 3) + (Math.ceil((parseInt(refi510.current.value) + parseInt((refe510.current.value / 2))) / 10)) + (Math.ceil((parseInt(refi610.current.value) + parseInt((refe610.current.value / 2))) / 10)) + (Math.ceil((parseInt(refi710.current.value) + parseInt((refe710.current.value / 2))) / 10)) + (Math.ceil((parseInt(refi810.current.value) + parseInt((refe810.current.value / 2))) / 10) * 2) + (Math.ceil((parseInt(refi910.current.value) + parseInt((refe910.current.value))) / 10) * 3)) / 20);
-            chemistry1.current.style.display="none"; 
+        if (parseInt(refi410.current.value)==50 && parseInt(refe410.current.value)==50) {
+            mechanical_total=parseInt((parseInt(refi410.current.value)+parseInt(refe410.current.value))/10)
+        }else if(parseInt(refi410.current.value)<20 || refi410.current.value==""  ||  parseInt(refe410.current.value)<20 || refe410.current.value=="" ){
+            mechanical_total=0;
         }
         else{
+            mechanical_total=parseInt((parseInt(refi410.current.value)+parseInt(refe410.current.value))/10)+1
+        }
+        if (parseInt(refi510.current.value)==50 && parseInt(refe510.current.value)==50) {
+            pps_total=parseInt((parseInt(refi510.current.value)+parseInt(refe510.current.value))/10)
+        }else if(parseInt(refi510.current.value)<20 || refi510.current.value=="" || parseInt(refe510.current.value)<20 || refe510.current.value=="" ){
+            pps_total=0;
+        }
+        else{
+            pps_total=parseInt((parseInt(refi510.current.value)+parseInt(refe510.current.value))/10)+1
+        }
+        if (parseInt(refi610.current.value)==50 && parseInt(refe610.current.value)==50) {
+            chemistry_lab_total=parseInt((parseInt(refi610.current.value)+parseInt(refe610.current.value))/10)
+        }else if(parseInt(refi610.current.value)<20 || refi610.current.value==""  || parseInt(refe610.current.value)<20 || refe610.current.value=="" ){
+            chemistry_lab_total=0;
+        }
+        else{
+            chemistry_lab_total=parseInt((parseInt(refi610.current.value)+parseInt(refe610.current.value))/10)+1
+        }
+        if (parseInt(refi710.current.value)==50 && parseInt(refe710.current.value)==50) {
+            pps_lab_total=parseInt((parseInt(refi710.current.value)+parseInt(refe710.current.value))/10)
+        }else if(parseInt(refi710.current.value)<20 || refi710.current.value==""  || parseInt(refe710.current.value)<20 || refe710.current.value=="" ){
+            pps_lab_total=0;
+        }
+        else{
+            pps_lab_total=parseInt((parseInt(refi710.current.value)+parseInt(refe710.current.value))/10)+1
+        }
+        if (parseInt(refi810.current.value)==50 && parseInt(refe810.current.value)==50) {
+            workshop_total=parseInt((parseInt(refi810.current.value)+parseInt(refe810.current.value))/10)
+        }else if(parseInt(refi810.current.value)<20 || refi810.current.value==""  || parseInt(refe810.current.value)<20 || refe810.current.value=="" ){
+            workshop_total=0;
+        }
+        else{
+            workshop_total=parseInt((parseInt(refi810.current.value)+parseInt(refe810.current.value))/10)+1
+        }
+        if (parseInt(refi910.current.value)==50 && parseInt(refe910.current.value)==50) {
+            dti_total=parseInt((parseInt(refi910.current.value)+parseInt(refe910.current.value))/10)
+        }
+        else if(parseInt(refi910.current.value)<20 || refi910.current.value=="" || parseInt(refe910.current.value)<20 || refi110.current.value=="" ){
+            dti_total=0;
+        }
+        else{
+            dti_total=parseInt((parseInt(refi910.current.value)+parseInt(refe910.current.value))/10)+1
+        }
+        const sgpa01 = ((math_total*3+chemistry_total*3+pps_total*3+mechanical_total*3+electronics_total*3+pps_lab_total+chemistry_lab_total+workshop_total*2+dti_total)/ 20);
+        if (sgpa01 > 0 && sgpa01 <= 10) {
+            setformData(sgpa01);
+            chemistry1.current.style.display = "none";
+        }
+        else {
+            red2.current.style.backgroundColor = "red";
+            setnote(true)
+        }
+     console.log((refi110.current.value)="");
+    }
+    const refresh=()=>{
+        window.location.reload();
+    }
+    const HandleChange_physics_submit = () => {
+        let math_total,physics_total,physics_lab_total,electrical_total,electrical_lab_total,media_total,english_total,mechanics_total,graphic_total;
+        if (parseInt(refi11.current.value)==50 && parseInt(refe11.current.value)==50) {
+            math_total=parseInt((parseInt(refi11.current.value)+parseInt(refe11.current.value))/10)
+        }else if(parseInt(refi11.current.value)<20 || refi11.current.value==""  || parseInt(refe11.current.value)<20 || refe11.current.value=="" ){
+            math_total=0;
+        }
+        else{
+            math_total=parseInt((parseInt(refi11.current.value)+parseInt(refe11.current.value))/10)+1
+        }
+        if (parseInt(refi21.current.value)==50 && parseInt(refe21.current.value)==50) {
+            physics_total=parseInt((parseInt(refi21.current.value)+parseInt(refe21.current.value))/10)
+        }else if(parseInt(refi21.current.value)<20 || refi21.current.value==""  || parseInt(refe21.current.value)<20 || refe21.current.value=="" ){
+            physics_total=0;
+        }
+        else{
+            physics_total=parseInt((parseInt(refi21.current.value)+parseInt(refe21.current.value))/10)+1
+        }
+        if (parseInt(refi31.current.value)==50 && parseInt(refe31.current.value)==50) {
+            electrical_total=parseInt((parseInt(refi31.current.value)+parseInt(refe31.current.value))/10)
+        }else if(parseInt(refi31.current.value)<20 || refi31.current.value==""  || parseInt(refe31.current.value)<20 || refe31.current.value=="" ){
+            electrical_total=0;
+        }
+        else{
+            electrical_total=parseInt((parseInt(refi31.current.value)+parseInt(refe31.current.value))/10)+1
+        }
+        if (parseInt(refi41.current.value)==50 && parseInt(refe41.current.value)==50) {
+            mechanics_total=parseInt((parseInt(refi41.current.value)+parseInt(refe41.current.value))/10)
+        }else if(parseInt(refi41.current.value)<20 || refi41.current.value==""  ||  parseInt(refe41.current.value)<20 || refe41.current.value=="" ){
+            mechanics_total=0;
+        }
+        else{
+            mechanics_total=parseInt((parseInt(refi41.current.value)+parseInt(refe41.current.value))/10)+1
+        }
+        if (parseInt(refi51.current.value)==50 && parseInt(refe51.current.value)==50) {
+            graphic_total=parseInt((parseInt(refi51.current.value)+parseInt(refe51.current.value))/10)
+        }else if(parseInt(refi51.current.value)<20 || refi51.current.value=="" || parseInt(refe51.current.value)<20 || refe51.current.value=="" ){
+            graphic_total=0;
+        }
+        else{
+            graphic_total=parseInt((parseInt(refi51.current.value)+parseInt(refe51.current.value))/10)+1
+        }
+        if (parseInt(refi61.current.value)==50 && parseInt(refe61.current.value)==50) {
+            physics_lab_total=parseInt((parseInt(refi61.current.value)+parseInt(refe61.current.value))/10)
+        }else if(parseInt(refi61.current.value)<20 || refi61.current.value==""  || parseInt(refe61.current.value)<20 || refe61.current.value=="" ){
+            physics_lab_total=0;
+        }
+        else{
+            physics_lab_total=parseInt((parseInt(refi61.current.value)+parseInt(refe61.current.value))/10)+1
+        }
+        if (parseInt(refi71.current.value)==50 && parseInt(refe71.current.value)==50) {
+            electrical_lab_total=parseInt((parseInt(refi71.current.value)+parseInt(refe71.current.value))/10)
+        }else if(parseInt(refi71.current.value)<20 || refi71.current.value==""  || parseInt(refe71.current.value)<20 || refe71.current.value=="" ){
+            electrical_lab_total=0;
+        }
+        else{
+            electrical_lab_total=parseInt((parseInt(refi71.current.value)+parseInt(refe71.current.value))/10)+1
+        }
+        if (parseInt(refi81.current.value)==50 && parseInt(refe81.current.value)==50) {
+            english_total=parseInt((parseInt(refi81.current.value)+parseInt(refe81.current.value))/10)
+        }else if(parseInt(refi81.current.value)<20 || refi81.current.value==""  || parseInt(refe81.current.value)<20 || refe81.current.value=="" ){
+            english_total=0;
+        }
+        else{
+            english_total=parseInt((parseInt(refi81.current.value)+parseInt(refe81.current.value))/10)+1
+        }
+        if (parseInt(refi91.current.value)==50 && parseInt(refe91.current.value)==50) {
+            media_total=parseInt((parseInt(refi91.current.value)+parseInt(refe91.current.value))/10)
+        }
+        else if(parseInt(refi91.current.value)<20 || refi91.current.value=="" || parseInt(refe91.current.value)<20 || refe91.current.value=="" ){
+            media_total=0;
+        }
+        else{
+            media_total=parseInt((parseInt(refi91.current.value)+parseInt(refe91.current.value))/10)+1
+        }
+        const sgpa01 = ((math_total*3+physics_total*3+graphic_total*3+mechanics_total*3+electrical_total*3+electrical_lab_total+physics_lab_total+english_total*2+media_total)/ 20);
+        console.log(sgpa01);
+        console.log(electrical_total);
+        if (sgpa01 > 0 && sgpa01 <= 10) {
+            setformData(sgpa01);
+            physics1.current.style.display = "none";
+        }
+        else {
             console.log("done")
-            red1.current.style.backgroundColor="red";
+            red1.current.style.backgroundColor = "red";
+            setnote(true)
         }
-        
-                   }           
-  
-  return (
-    <>
-    <div ref={tohide} className='md:fixed md:top-[15%] md:left-[10%] bg-stone-300 sm:flex sm:justify-center sm:h-screen md:w-[80%]  md:h-[80%]'>
-    <div className='md:w-[60%] h-[40%] md:m-auto sm:my-auto md:mt-[15%]  gap-8 grid md:place-items-center'>
-      <div className='text-3xl font-bold m-auto sm:h-2'>Enter Your Semester</div>
-      <input ref={sub} placeholder='Physics or Chemistry etc..' type="text" className='border-2  border-indigo-700 rounded-full py-3 px-5 text-center md:w-[70%] m-auto' />
-      <button onClick={handlechange} className='bg-green-500 p-5   rounded-full w-[30%] m-auto text-white font-bold'>Submit</button>
-      </div>
-    </div>
-    {chemistry && <div ref={chemistry1}><div className='sm:h-screen block md:hidden md:w-[100%] sm:grid sm:place-content-center'>
-        <div className='md:fixed md:top-[12%] md:left-[10%] bg-stone-300 md:w-[100%] h-[90%]'>
-            <div className='h-[90%] w-[80%] sm:mx-auto'>
-                <div className='sm:w-[100%] md:grid md:place-content-center  sm:flex sm:flex-col sm:align-middle sm:justify-center'><div><div className='text-sm font-semibold md:my-1 mx-12'>Subject-1:Mathematics</div>
-                    <div className='flex gap-4'>
+
+    }
+
+    return (
+        <>
+            <div ref={tohide} className=' bg-white   top-[20%] h-screen flex items-center justify-center'>
+                <div className='m-10 border drop-shadow-md w-4/5 h-2/3  flex flex-col items-center bg-[#f7f7f7] justify-center gap-6'>
+                    <div className="text-2xl text-black font-serif">SELECT YOUR CYCLE</div>
+                    <button onClick={chemistry88} className='bg-black px-5 py-2 w-[60%] text-white font-bold'>CHEMISTRY</button>
+                    <button onClick={physics88} className='bg-black px-5 py-2 w-[60%] text-white font-bold'>PHYSICS</button>
+                </div>
+            </div>
+            {chemistry && <div ref={chemistry1} className='  h-screen flex bg-white  items-center justify-center  '>
+                <div className='m-10   border drop-shadow-md   w-4/5 h-4/5  hide-scrollbar overflow-scroll flex flex-col items-center bg-[#f7f7f7]  p-3'>
+
+                   <div> <div className='text-sm font-semibold m-2 font-serif '>MATHEMARICS</div>
+                    <div className='flex m-2 gap-4'>
                         <div className='sm:flex sm:justify-around sm:align-middle'><div>
-                            <div className='text-[10px] sm-[40%] font-semibold'>Internals Marks</div>
-                            <input type="text" ref={refi110} placeholder='50' className='border  sm:w-[100%] border-indigo-700 px-5' />
+                            <input type="text" ref={refi110}  placeholder='Internal marks' className='border text-[10px] sm:w-[100%] border-black px-4 py-2' />
                         </div></div>
                         <div className='sm:flex sm:justify-center sm:align-middle'><div>
-                            <div className='text-[10px] sm-[40%] font-semibold'>Externals Marks</div>
-                            <input type="text" ref={refe110} placeholder='100' className='border md:w-[60%] sm:w-[100%] border-indigo-700 px-5' />
-                        </div></div>
-                    </div>
-                </div>
-                    <div><div className='text-sm font-semibold md:my-1 mx-12 '>Subject-2:Chemistry</div>
-                        <div className='flex gap-4'>
+                            <input type="text" ref={refe110}  placeholder='External marks' className='border text-[10px] sm:w-[100%] border-black px-4 py-2' />
+                        </div>
+                        </div>
+                    </div></div>
+                    <div><div className='text-sm font-semibold m-2 font-serif '>CHEMISTRY</div>
+                        <div className='flex m-2 gap-4'>
                             <div className='sm:flex sm:justify-center sm:align-middle'><div>
-                                <div className='text-[10px] sm-[40%] font-semibold'>Internals Marks</div>
-                                <input type="text" ref={refi210} placeholder='50' className='border md:w-[60%] sm:w-[100%] border-indigo-700 px-5' />
+
+                                <input type="text" ref={refi210} placeholder='Internal marks' className='border text-[10px] sm:w-[100%] border-black px-4 py-2' />
                             </div></div>
                             <div className='sm:flex sm:justify-center sm:align-middle'><div>
-                                <div className='text-[10px] sm-[40%] font-semibold'>Externals Marks</div>
-                                <input type="text" ref={refe210} placeholder='100' className='border md:w-[60%] sm:w-[100%] border-indigo-700 px-5' />
+
+                                <input type="text" ref={refe210} placeholder='External marks' className='border text-[10px] sm:w-[100%] border-black px-4 py-2' />
                             </div></div>
                         </div>
                     </div>
-                    <div><div className='text-sm font-semibold md:my-1 mx-12 '>Subject-3:Electronics</div>
-                        <div className='flex gap-4'>
+                    <div><div className='text-sm font-semibold m-2 font-serif '>ELECTRONICS</div>
+                        <div className='flex m-2 gap-4'>
                             <div className='sm:flex sm:justify-center sm:align-middle'><div>
-                                <div className='text-[10px] sm-[40%] font-semibold'>Internals Marks</div>
-                                <input type="text" ref={refi310} placeholder='50' className='border md:w-[60%] sm:w-[100%] border-indigo-700 px-5' />
+
+                                <input type="text" ref={refi310} placeholder='Internal marks' className='border text-[10px] sm:w-[100%] border-black px-4 py-2' />
                             </div></div>
                             <div className='sm:flex sm:justify-center sm:align-middle'><div>
-                                <div className='text-[10px] sm-[40%] font-semibold'>Externals Marks</div>
-                                <input type="text" ref={refe310} placeholder='100' className='border md:w-[60%] sm:w-[100%] border-indigo-700 px-5' />
-                            </div></div>
-                        </div>
-                    </div>
-                    <div><div className='text-sm font-semibold md:my-1 mx-12 '>Subject-4:Mechanical</div>
-                        <div className='flex gap-4'>
-                            <div className='sm:flex sm:justify-center sm:align-middle'><div>
-                                <div className='text-[10px] sm-[40%] font-semibold'>Internals Marks</div>
-                                <input type="text" ref={refi410} placeholder='50' className='border md:w-[60%] sm:w-[100%] border-indigo-700 px-5' />
-                            </div></div>
-                            <div className='sm:flex sm:justify-center sm:align-middle'><div>
-                                <div className='text-[10px] sm-[40%] font-semibold'>Externals Marks</div>
-                                <input type="text" ref={refe410} placeholder='100' className='border md:w-[60%] sm:w-[100%] border-indigo-700 px-5' />
+
+                                <input type="text" ref={refe310} placeholder='External marks' className='border text-[10px] sm:w-[100%] border-black px-4 py-2' />
                             </div></div>
                         </div>
                     </div>
-                    <div><div className='text-sm font-semibold md:my-1 mx-12 '>Subject-5:PPS</div>
-                        <div className='flex gap-4'>
+                    <div><div className='text-sm font-semibold m-2 font-serif '>MECHANICAL</div>
+                        <div className='flex m-2 gap-4'>
                             <div className='sm:flex sm:justify-center sm:align-middle'><div>
-                                <div className='text-[10px] sm-[40%] font-semibold'>Internals Marks</div>
-                                <input type="text" ref={refi510} placeholder='50' className='border md:w-[60%] sm:w-[100%] border-indigo-700 px-5' />
+
+                                <input type="text" ref={refi410} placeholder='Internal marks' className='border text-[10px] sm:w-[100%] border-black px-4 py-2' />
                             </div></div>
                             <div className='sm:flex sm:justify-center sm:align-middle'><div>
-                                <div className='text-[10px] sm-[40%] font-semibold'>Externals Marks</div>
-                                <input type="text" ref={refe510} placeholder='100' className='border md:w-[60%] sm:w-[100%] border-indigo-700 px-5' />
-                            </div></div>
-                        </div>
-                    </div>
-                    <div><div className='text-sm font-semibold md:my-1 mx-12 '>Subject-6:Chemistry lab</div>
-                        <div className='flex gap-4'>
-                            <div className='sm:flex sm:justify-center sm:align-middle'><div>
-                                <div className='text-[10px] sm-[40%] font-semibold'>Internals Marks</div>
-                                <input type="text" ref={refi610} placeholder='50' className='border md:w-[60%] sm:w-[100%] border-indigo-700 px-5' />
-                            </div></div>
-                            <div className='sm:flex sm:justify-center sm:align-middle'><div>
-                                <div className='text-[10px] sm-[40%] font-semibold'>Externals Marks</div>
-                                <input type="text" ref={refe610} placeholder='100' className='border md:w-[60%] sm:w-[100%] border-indigo-700 px-5' />
+
+                                <input type="text" ref={refe410} placeholder='External marks' className='border text-[10px] sm:w-[100%] border-black px-4 py-2' />
                             </div></div>
                         </div>
                     </div>
-                    <div><div className='text-sm font-semibold md:my-1 mx-12 '>Subject-7:PPS lab</div>
-                        <div className='flex gap-4'>
+                    <div><div className='text-sm font-semibold m-2 font-serif '>PPS</div>
+                        <div className='flex m-2 gap-4'>
                             <div className='sm:flex sm:justify-center sm:align-middle'><div>
-                                <div className='text-[10px] sm-[40%] font-semibold'>Internals Marks</div>
-                                <input type="text" ref={refi710} placeholder='50' className='border md:w-[60%] sm:w-[100%] border-indigo-700 px-5' />
+
+                                <input type="text" ref={refi510} placeholder='Internal marks' className='border text-[10px] sm:w-[100%] border-black px-4 py-2' />
                             </div></div>
                             <div className='sm:flex sm:justify-center sm:align-middle'><div>
-                                <div className='text-[10px] sm-[40%] font-semibold'>Externals Marks</div>
-                                <input type="text" ref={refe710} placeholder='100' className='border md:w-[60%] sm:w-[100%] border-indigo-700 px-5' />
-                            </div></div>
-                        </div>
-                    </div>
-                    <div><div className='text-sm font-semibold md:my-1 mx-12 '>Subject-8:Workshop</div>
-                        <div className='flex gap-4'>
-                            <div className='sm:flex sm:justify-center sm:align-middle'><div>
-                                <div className='text-[10px] sm-[40%] font-semibold'>Internals Marks</div>
-                                <input type="text" ref={refi810} placeholder='50' className='border md:w-[60%] sm:w-[100%] border-indigo-700 px-5' />
-                            </div></div>
-                            <div className='sm:flex sm:justify-center sm:align-middle'><div>
-                                <div className='text-[10px] sm-[40%] font-semibold'>Externals Marks</div>
-                                <input type="text" ref={refe810} placeholder='100' className='border md:w-[60%] sm:w-[100%] border-indigo-700 px-5' />
+
+                                <input type="text" ref={refe510} placeholder='External marks' className='border text-[10px] sm:w-[100%] border-black px-4 py-2' />
                             </div></div>
                         </div>
-                    </div>
-                    <div><div className='text-sm font-semibold md:my-1 mx-12 '>Subject-9:DTI</div>
-                        <div className='flex gap-4'>
-                            <div className='sm:flex sm:justify-center sm:align-middle'><div>
-                                <div className='text-[10px] sm-[40%] font-semibold'>Internals Marks</div>
-                                <input type="text" ref={refi910} placeholder='50' className='border md:w-[60%] sm:w-[100%] border-indigo-700 px-5' />
-                            </div></div>
-                            <div className='sm:flex sm:justify-center sm:align-middle'><div>
-                                <div className='text-[10px] sm-[40%] font-semibold'>Externals Marks</div>
-                                <input type="text" ref={refe910} placeholder='50' className='border md:w-[60%] sm:w-[100%] border-indigo-700 px-4' />
+                        <div><div className='text-sm font-semibold m-2 font-serif '>CHEMISTRY LAB</div>
+                            <div className='flex m-2 gap-4'>
+                                <div className='sm:flex sm:justify-center sm:align-middle'><div>
+
+                                    <input type="text" ref={refi610} placeholder='Internal marks' className='border text-[10px] sm:w-[100%] border-black px-4 py-2' />
+                                </div></div>
+                                <div className='sm:flex sm:justify-center sm:align-middle'><div>
+
+                                    <input type="text" ref={refe610} placeholder='External marks' className='border text-[10px] sm:w-[100%] border-black px-4 py-2' />
+                                </div></div>
+                            </div>
+                        </div>
+                        <div><div className='text-sm font-semibold m-2 font-serif '>PPS LAB</div>
+                            <div className='flex m-2 gap-4'>
+                                <div className='sm:flex sm:justify-center sm:align-middle'><div>
+
+                                    <input type="text" ref={refi710} placeholder='Internal marks' className='border text-[10px] sm:w-[100%] border-black px-4 py-2' />
+                                </div></div>
+                                <div className='sm:flex sm:justify-center sm:align-middle'><div>
+
+                                    <input type="text" ref={refe710} placeholder='External marks' className='border text-[10px] sm:w-[100%] border-black px-4 py-2' />
+                                </div></div>
+                            </div>
+                        </div>
+                        <div><div className='text-sm font-semibold m-2 font-serif '>WORKSHOP</div>
+                            <div className='flex m-2 gap-4'>
+                                <div className='sm:flex sm:justify-center sm:align-middle'><div>
+
+                                    <input type="text" ref={refi810} placeholder='Internal marks' className='border text-[10px] sm:w-[100%] border-black px-4 py-2' />
+                                </div></div>
+                                <div className='sm:flex sm:justify-center sm:align-middle'><div>
+
+                                    <input type="text" ref={refe810} placeholder='External marks' className='border text-[10px] sm:w-[100%] border-black px-4 py-2' />
+                                </div></div>
+                            </div>
+                        </div>
+                        <div><div className='text-sm font-semibold m-2 font-serif '>DTI</div>
+                            <div className='flex m-2 gap-4'>
+                                <div className='sm:flex sm:justify-center sm:align-middle'><div>
+
+                                    <input type="text" ref={refi910} placeholder='Internal marks' className='border text-[10px] sm:w-[100%] border-black px-4 py-2' />
+                                </div></div>
+                                <div className='sm:flex sm:justify-center sm:align-middle'><div>
+
+                                    <input type="text" ref={refe910} placeholder='Internal marks' className='border text-[10px] sm:w-[100%] border-black px-4 py-2' />
+
+                                </div>
+                                </div>
+                            </div>
                             
                         </div>
                     </div>
-                    </div></div>
+                    <div className='grid place-content-center  my-4'>
+                                <button onClick={HandleChange_chemistry_submit} ref={red2} className='bg-black  text-white text-xl font-semibold py-2 px-4  '>SUBMIT</button>
+                                {note && <  div className='font-serif'><h1 className='text-red-600 '>*Note</h1><div>Please Enter Proper Marks</div>Internal is for 50 and External is for 50</div>}
+                            </div>
+                </div>
+                   </div>}
+            {physics && <div ref={physics1} className=' h-screen flex bg-white  items-center justify-center'>
+                <div className='m-10   border drop-shadow-md   w-4/5 h-4/5 hide-scrollbar overflow-scroll flex flex-col items-center bg-[#f7f7f7]  p-3'>
+                        <div ><div><div className='text-sm font-semibold m-2 font-serif'>MATHEMATICS</div>
+                            <div className='flex m-2 gap-4'>
+                                <div className='sm:flex sm:justify-around sm:align-middle'><div>
+
+                                    <input type="text" ref={refi11} placeholder='Internal marks' className='border text-[10px] sm:w-[100%] border-black px-4 py-2' />
+                                </div></div>
+                                <div className='sm:flex sm:justify-center sm:align-middle'><div>
+
+                                    <input type="text" ref={refe11} placeholder='External marks' className='border text-[10px] sm:w-[100%] border-black px-4 py-2' />
+                                </div></div>
+                            </div>
+                        </div>
+                            <div><div className='text-sm font-semibold m-2 font-serif '>PHYSICS</div>
+                                <div className='flex m-2 gap-4'>
+                                    <div className='sm:flex sm:justify-center sm:align-middle'><div>
+
+                                        <input type="text" ref={refi21} placeholder='Internal marks' className='border text-[10px] sm:w-[100%] border-black px-4 py-2' />
+                                    </div></div>
+                                    <div className='sm:flex sm:justify-center sm:align-middle'><div>
+
+                                        <input type="text" ref={refe21} placeholder='External marks' className='border text-[10px] sm:w-[100%] border-black px-4 py-2' />
+                                    </div></div>
+                                </div>
+                            </div>
+                            <div><div className='text-sm font-semibold m-2 font-serif '>ELECTRICAL</div>
+                                <div className='flex m-2 gap-4'>
+                                    <div className='sm:flex sm:justify-center sm:align-middle'><div>
+
+                                        <input type="text" ref={refi31} placeholder='Internal marks' className='border text-[10px] sm:w-[100%] border-black px-4 py-2' />
+                                    </div></div>
+                                    <div className='sm:flex sm:justify-center sm:align-middle'><div>
+
+                                        <input type="text" ref={refe31} placeholder='External marks' className='border text-[10px] sm:w-[100%] border-black px-4 py-2' />
+                                    </div></div>
+                                </div>
+                            </div>
+                            <div><div className='text-sm font-semibold m-2 font-serif '>MECHANICS</div>
+                                <div className='flex m-2 gap-4'>
+                                    <div className='sm:flex sm:justify-center sm:align-middle'><div>
+
+                                        <input type="text" ref={refi41} placeholder='Internal marks' className='border text-[10px] sm:w-[100%] border-black px-4 py-2' />
+                                    </div></div>
+                                    <div className='sm:flex sm:justify-center sm:align-middle'><div>
+
+                                        <input type="text" ref={refe41} placeholder='External marks' className='border text-[10px] sm:w-[100%] border-black px-4 py-2' />
+                                    </div></div>
+                                </div>
+                            </div>
+                            <div><div className='text-sm font-semibold m-2 font-serif '>GRAPHICS</div>
+                                <div className='flex m-2 gap-4'>
+                                    <div className='sm:flex sm:justify-center sm:align-middle'><div>
+
+                                        <input type="text" ref={refi51} placeholder='Internal marks' className='border text-[10px] sm:w-[100%] border-black px-4 py-2' />
+                                    </div></div>
+                                    <div className='sm:flex sm:justify-center sm:align-middle'><div>
+
+                                        <input type="text" ref={refe51} placeholder='External marks' className='border text-[10px] sm:w-[100%] border-black px-4 py-2' />
+                                    </div></div>
+                                </div>
+                            </div>
+                            <div><div className='text-sm font-semibold m-2 font-serif '>PHYSICS LAB</div>
+                                <div className='flex m-2 gap-4'>
+                                    <div className='sm:flex sm:justify-center sm:align-middle'><div>
+
+                                        <input type="text" ref={refi61} placeholder='Internal marks' className='border text-[10px] sm:w-[100%] border-black px-4 py-2' />
+                                    </div></div>
+                                    <div className='sm:flex sm:justify-center sm:align-middle'><div>
+
+                                        <input type="text" ref={refe61} placeholder='External marks' className='border text-[10px] sm:w-[100%] border-black px-4 py-2' />
+                                    </div></div>
+                                </div>
+                            </div>
+                            <div><div className='text-sm font-semibold m-2 font-serif '>ELECTRICAL LAB</div>
+                                <div className='flex m-2 gap-4'>
+                                    <div className='sm:flex sm:justify-center sm:align-middle'><div>
+
+                                        <input type="text" ref={refi71} placeholder='Internal marks' className='border text-[10px] sm:w-[100%] border-black px-4 py-2' />
+                                    </div></div>
+                                    <div className='sm:flex sm:justify-center sm:align-middle'><div>
+
+                                        <input type="text" ref={refe71} placeholder='External marks' className='border text-[10px] sm:w-[100%] border-black px-4 py-2' />
+                                    </div></div>
+                                </div>
+                            </div>
+                            <div><div className='text-sm font-semibold m-2 font-serif '>ENGLISH</div>
+                                <div className='flex m-2 gap-4'>
+                                    <div className='sm:flex sm:justify-center sm:align-middle'><div>
+
+                                        <input type="text" ref={refi81} placeholder='Internal marks' className='border text-[10px] sm:w-[100%] border-black px-4 py-2' />
+                                    </div></div>
+                                    <div className='sm:flex sm:justify-center sm:align-middle'><div>
+
+                                        <input type="text" ref={refe81} placeholder='External marks' className='border text-[10px] sm:w-[100%] border-black px-4 py-2' />
+                                    </div></div>
+                                </div>
+                            </div>
+                            <div><div className='text-sm font-semibold m-2 font-serif '>MEDIA PRESENTATION</div>
+                                <div className='flex m-2 gap-4'>
+                                    <div className='sm:flex sm:justify-center sm:align-middle'><div>
+
+                                        <input type="text" ref={refi91} placeholder='Internal marks' className='border text-[10px] sm:w-[100%] border-black px-4 py-2' />
+                                    </div></div>
+                                    <div className='sm:flex sm:justify-center sm:align-middle'><div>
+
+                                        <input type="text" ref={refe91} placeholder='External marks' className='border text-[10px] sm:w-[100%] border-black px-4 py-2' />
+
+                                    </div>
+                                    </div>
+                                </div></div>
                             <div className='grid place-content-center  my-4'>
-                            <button onClick={HandleChange34} ref={red1} className='bg-green-500  text-white text-xl font-semibold py-2 px-4 rounded-full '>Submit</button>
+                                <button ref={red1} onClick={HandleChange_physics_submit} className='bg-black  text-white text-xl font-semibold py-2 px-4  '>SUBMIT</button>
+                                {note && <  div className='font-serif'><h1 className='text-red-600 '>*Note</h1><div>Please Enter Proper Marks</div>Internal is for 50 and External is for 50</div>}
                             </div>
-                </div>
-            </div>
-        </div>
-        </div>
-        <div className='fixed top-[12%] sm:hidden md:block left-[10%] bg-stone-300 w-[80%] h-[90%]'>
-            <div><div className='text-sm font-semibold my-1 mx-12'>Subject-1:Mathematics</div>
-                <div className='flex justify-around'>
-                    <div>
-                        <div className='text-[10px] font-semibold'>Internals Marks</div>
-                        <input ref={refi1} type="number" placeholder='50' className='border border-indigo-700 px-5' />
-                    </div>
-                    <div>
-                        <div className='text-[10px] font-semibold'>Externals Marks</div>
-                        <input ref={refe1} type="number" placeholder='100' className='border border-indigo-700 px-5' />
-                    </div>
-                </div>
-            </div>
-            <div><div className='text-sm font-semibold my-1 mx-12 '>Subject-2:Chemistry</div>
-                <div className='flex justify-around'>
-                    <div>
-                        <div className='text-[10px] font-semibold'>Internals Marks</div>
-                        <input ref={refi2} type="number" placeholder='50' className='border border-indigo-700 px-5' />
-                    </div>
-                    <div>
-                        <div className='text-[10px] font-semibold'>Externals Marks</div>
-                        <input ref={refe2} type="number" placeholder='100' className='border border-indigo-700 px-5' />
-                    </div>
-                </div>
-            </div>
-            <div><div className='text-sm font-semibold my-1 mx-12 '>Subject-3:Electronics</div>
-                <div className='flex justify-around'>
-                    <div>
-                        <div className='text-[10px] font-semibold'>Internals Marks</div>
-                        <input ref={refi3} type="number" placeholder='50' className='border border-indigo-700 px-5' />
-                    </div>
-                    <div>
-                        <div className='text-[10px] font-semibold'>Externals Marks</div>
-                        <input ref={refe3} type="number" placeholder='100' className='border border-indigo-700 px-5' />
-                    </div>
-                </div>
-            </div>
-            <div><div className='text-sm font-semibold my-1 mx-12 '>Subject-4:Mechanical</div>
-                <div className='flex justify-around'>
-                    <div>
-                        <div className='text-[10px] font-semibold'>Internals Marks</div>
-                        <input ref={refi4} type="number" placeholder='50' className='border border-indigo-700 px-5' />
-                    </div>
-                    <div>
-                        <div className='text-[10px] font-semibold'>Externals Marks</div>
-                        <input ref={refe4} type="number" placeholder='100' className='border border-indigo-700 px-5' />
-                    </div>
-                </div>
-            </div>
-            <div><div className='text-sm font-semibold my-1 mx-12 '>Subject-5:Workshop Lab</div>
-                <div className='flex justify-around'>
-                    <div>
-                        <div className='text-[10px] font-semibold'>Internals Marks</div>
-                        <input ref={refi5} type="number" placeholder='50' className='border border-indigo-700 px-5' />
-                    </div>
-                    <div>
-                        <div className='text-[10px] font-semibold'>Externals Marks</div>
-                        <input ref={refe5} type="number" placeholder='100' className='border border-indigo-700 px-5' />
-                    </div>
-                </div>
-            </div>
-            <div><div className='text-sm font-semibold my-1 mx-12 '>Subject-6:Chemistry lab</div>
-                <div className='flex justify-around'>
-                    <div>
-                        <div className='text-[10px] font-semibold'>Internals Marks</div>
-                        <input ref={refi6} type="number" placeholder='50' className='border border-indigo-700 px-5' />
-                    </div>
-                    <div>
-                        <div className='text-[10px] font-semibold'>Externals Marks</div>
-                        <input ref={refe6} type="number" placeholder='100' className='border border-indigo-700 px-5' />
-                    </div>
-                </div>
-            </div>
-            <div><div className='text-sm font-semibold my-1 mx-12 '>Subject-7:DTI</div>
-                <div className='flex justify-around'>
-                    <div>
-                        <div className='text-[10px] font-semibold'>Internals Marks</div>
-                        <input ref={refi7} type="number" placeholder='50' className='border border-indigo-700 px-5' />
-                    </div>
-                    <div>
-                        <div className='text-[10px] font-semibold'>Externals Marks</div>
-                        <input ref={refe7} type="number" placeholder='50' className='border border-indigo-700 px-5' />
-                    </div>
-                </div>
-            </div>
-            <div><div className='text-sm font-semibold my-1 mx-12 '>Subject-8:PPS</div>
-                <div className='flex justify-around'>
-                    <div>
-                        <div className='text-[10px] font-semibold'>Internals Marks</div>
-                        <input ref={refi8} type="number" placeholder='50' className='border border-indigo-700 px-5' />
-                    </div>
-                    <div>
-                        <div className='text-[10px] font-semibold'>Externals Marks</div>
-                        <input ref={refe8} type="number" placeholder='100' className='border border-indigo-700 px-5' />
-                    </div>
-                </div>
-            </div>
-            <div><div className='text-sm font-semibold my-1 mx-12 '>Subject-9:PPS Lab</div>
-                <div className='flex justify-around'>
-                    <div>
-                        <div className='text-[10px] font-semibold'>Internals Marks</div>
-                        <input ref={refi9} type="number" placeholder='50' className='border border-indigo-700 px-5' />
-                    </div>
-                    <div>
-                        <div className='text-[10px] font-semibold'>Externals Marks</div>
-                        <input ref={refe9} type="number" placeholder='100' className='border border-indigo-700 px-4' />
-                    </div>
-                </div>
-            </div>
-            <button onClick={HandleChange75} ref={red} className='bg-green-500 text-white text-xl font-semibold py-3 px-5 rounded-full fixed bottom-2 left-[47%]'>Submit</button>
-        </div>
-        </div>}
-        {physics && <div ref={chemistry1}><div className='h-screen m-auto block md:hidden md:w-[100%] sm:grid sm:place-content-center'>
-        <div className='md:fixed md:top-[12%] md:left-[10%] bg-stone-300 md:w-[100%] h-[90%]'>
-            <div className='h-[90%] w-[80%] sm:mx-auto'>
-                <div className='sm:w-[100%] md:grid md:place-content-center  sm:flex sm:flex-col sm:align-middle sm:justify-center'><div><div className='text-sm font-semibold md:my-1 mx-12'>Subject-1:Mathematics</div>
-                    <div className='flex gap-4'>
-                        <div className='sm:flex sm:justify-around sm:align-middle'><div>
-                            <div className='text-[10px] sm-[40%] font-semibold'>Internals Marks</div>
-                            <input type="text" ref={refi11}  placeholder='50' className='border md:w-[60%] sm:w-[100%] border-indigo-700 px-5' />
-                        </div></div>
-                        <div className='sm:flex sm:justify-center sm:align-middle'><div>
-                            <div className='text-[10px] sm-[40%] font-semibold'>Externals Marks</div>
-                            <input type="text" ref={refe11} placeholder='100' className='border md:w-[60%] sm:w-[100%] border-indigo-700 px-5' />
-                        </div></div>
-                    </div>
-                </div>
-                    <div><div className='text-sm font-semibold md:my-1 mx-12 '>Subject-2:Physics</div>
-                        <div className='flex gap-4'>
-                            <div className='sm:flex sm:justify-center sm:align-middle'><div>
-                                <div className='text-[10px] sm-[40%] font-semibold'>Internals Marks</div>
-                                <input type="text" ref={refi21} placeholder='50' className='border md:w-[60%] sm:w-[100%] border-indigo-700 px-5' />
-                            </div></div>
-                            <div className='sm:flex sm:justify-center sm:align-middle'><div>
-                                <div className='text-[10px] sm-[40%] font-semibold'>Externals Marks</div>
-                                <input type="text" ref={refe21} placeholder='100' className='border md:w-[60%] sm:w-[100%] border-indigo-700 px-5' />
-                            </div></div>
                         </div>
-                    </div>
-                    <div><div className='text-sm font-semibold md:my-1 mx-12 '>Subject-3:Electrical</div>
-                        <div className='flex gap-4'>
-                            <div className='sm:flex sm:justify-center sm:align-middle'><div>
-                                <div className='text-[10px] sm-[40%] font-semibold'>Internals Marks</div>
-                                <input type="text" ref={refi31} placeholder='50' className='border md:w-[60%] sm:w-[100%] border-indigo-700 px-5' />
-                            </div></div>
-                            <div className='sm:flex sm:justify-center sm:align-middle'><div>
-                                <div className='text-[10px] sm-[40%] font-semibold'>Externals Marks</div>
-                                <input type="text" ref={refe31} placeholder='100' className='border md:w-[60%] sm:w-[100%] border-indigo-700 px-5' />
-                            </div></div>
-                        </div>
-                    </div>
-                    <div><div className='text-sm font-semibold md:my-1 mx-12 '>Subject-4:Mechanics</div>
-                        <div className='flex gap-4'>
-                            <div className='sm:flex sm:justify-center sm:align-middle'><div>
-                                <div className='text-[10px] sm-[40%] font-semibold'>Internals Marks</div>
-                                <input type="text" ref={refi41} placeholder='50' className='border md:w-[60%] sm:w-[100%] border-indigo-700 px-5' />
-                            </div></div>
-                            <div className='sm:flex sm:justify-center sm:align-middle'><div>
-                                <div className='text-[10px] sm-[40%] font-semibold'>Externals Marks</div>
-                                <input type="text" ref={refe41} placeholder='100' className='border md:w-[60%] sm:w-[100%] border-indigo-700 px-5' />
-                            </div></div>
-                        </div>
-                    </div>
-                    <div><div className='text-sm font-semibold md:my-1 mx-12 '>Subject-5:Graphics</div>
-                        <div className='flex gap-4'>
-                            <div className='sm:flex sm:justify-center sm:align-middle'><div>
-                                <div className='text-[10px] sm-[40%] font-semibold'>Internals Marks</div>
-                                <input type="text" ref={refi51} placeholder='50' className='border md:w-[60%] sm:w-[100%] border-indigo-700 px-5' />
-                            </div></div>
-                            <div className='sm:flex sm:justify-center sm:align-middle'><div>
-                                <div className='text-[10px] sm-[40%] font-semibold'>Externals Marks</div>
-                                <input type="text" ref={refe51} placeholder='100' className='border md:w-[60%] sm:w-[100%] border-indigo-700 px-5' />
-                            </div></div>
-                        </div>
-                    </div>
-                    <div><div className='text-sm font-semibold md:my-1 mx-12 '>Subject-6:Physics lab</div>
-                        <div className='flex gap-4'>
-                            <div className='sm:flex sm:justify-center sm:align-middle'><div>
-                                <div className='text-[10px] sm-[40%] font-semibold'>Internals Marks</div>
-                                <input type="text" ref={refi61} placeholder='50' className='border md:w-[60%] sm:w-[100%] border-indigo-700 px-5' />
-                            </div></div>
-                            <div className='sm:flex sm:justify-center sm:align-middle'><div>
-                                <div className='text-[10px] sm-[40%] font-semibold'>Externals Marks</div>
-                                <input type="text" ref={refe61} placeholder='100' className='border md:w-[60%] sm:w-[100%] border-indigo-700 px-5' />
-                            </div></div>
-                        </div>
-                    </div>
-                    <div><div className='text-sm font-semibold md:my-1 mx-12 '>Subject-7:Electrical lab</div>
-                        <div className='flex gap-4'>
-                            <div className='sm:flex sm:justify-center sm:align-middle'><div>
-                                <div className='text-[10px] sm-[40%] font-semibold'>Internals Marks</div>
-                                <input type="text" ref={refi71} placeholder='50' className='border md:w-[60%] sm:w-[100%] border-indigo-700 px-5' />
-                            </div></div>
-                            <div className='sm:flex sm:justify-center sm:align-middle'><div>
-                                <div className='text-[10px] sm-[40%] font-semibold'>Externals Marks</div>
-                                <input type="text" ref={refe71} placeholder='100' className='border md:w-[60%] sm:w-[100%] border-indigo-700 px-5' />
-                            </div></div>
-                        </div>
-                    </div>
-                    <div><div className='text-sm font-semibold md:my-1 mx-12 '>Subject-8:English</div>
-                        <div className='flex gap-4'>
-                            <div className='sm:flex sm:justify-center sm:align-middle'><div>
-                                <div className='text-[10px] sm-[40%] font-semibold'>Internals Marks</div>
-                                <input type="text" ref={refi81} placeholder='50' className='border md:w-[60%] sm:w-[100%] border-indigo-700 px-5' />
-                            </div></div>
-                            <div className='sm:flex sm:justify-center sm:align-middle'><div>
-                                <div className='text-[10px] sm-[40%] font-semibold'>Externals Marks</div>
-                                <input type="text" ref={refe81} placeholder='100' className='border md:w-[60%] sm:w-[100%] border-indigo-700 px-5' />
-                            </div></div>
-                        </div>
-                    </div>
-                    <div><div className='text-sm font-semibold md:my-1 mx-12 '>Subject-9:Media Presentation</div>
-                        <div className='flex gap-4'>
-                            <div className='sm:flex sm:justify-center sm:align-middle'><div>
-                                <div className='text-[10px] sm-[40%] font-semibold'>Internals Marks</div>
-                                <input type="text" ref={refi91} placeholder='50' className='border md:w-[60%] sm:w-[100%] border-indigo-700 px-5' />
-                            </div></div>
-                            <div className='sm:flex sm:justify-center sm:align-middle'><div>
-                                <div className='text-[10px] sm-[40%] font-semibold'>Externals Marks</div>
-                                <input type="text" ref={refe91} placeholder='100' className='border md:w-[60%] sm:w-[100%] border-indigo-700 px-4' />
-                            
-                        </div>
-                    </div>
-                    </div></div>
-                            <div className='grid place-content-center  md:hidden my-4'>
-                            <button ref={red2} onClick={HandleChange1} className='bg-green-500  text-white text-xl font-semibold py-2 px-4 rounded-full '>Submit</button>
-                            </div>
-                </div>
+                
+               
             </div>
-        </div>
-        </div>
-        <div className='fixed top-[12%] md:block sm:hidden left-[10%] bg-stone-300 w-[80%] h-[90%]'>
-            <div><div className='text-sm font-semibold my-1 mx-12'>Subject-1:Mathematics</div>
-                <div className='flex justify-around'>
-                    <div>
-                        <div className='text-[10px] font-semibold'>Internals Marks</div>
-                        <input ref={refi1} type="number" placeholder='50' className='border border-indigo-700 px-5' />
+            </div>}
+            {(formData > 0 && formData <= 10) && <><div className='bg-white   top-[20%] h-screen flex items-center justify-center'>
+                <div className='m-10 border drop-shadow-md w-4/5 h-2/3 flex flex-col items-center bg-[#f7f7f7] justify-center gap-5'>
+                    
+                        <div className='text-3xl font-bold '>Your SGPA is:</div>
+                        <div className='text-6xl font-bold text-center '>{formData}</div>
+                        <button onClick={refresh} className='border rounded-full text-black font-bold font-serif  bg-white px-6 py-3'>HOME</button>
                     </div>
-                    <div>
-                        <div className='text-[10px] font-semibold'>Externals Marks</div>
-                        <input ref={refe1} type="number" placeholder='100' className='border border-indigo-700 px-5' />
-                    </div>
-                </div>
-            </div>
-            <div><div className='text-sm font-semibold my-1 mx-12 '>Subject-2:Physics</div>
-                <div className='flex justify-around'>
-                    <div>
-                        <div className='text-[10px] font-semibold'>Internals Marks</div>
-                        <input ref={refi2} type="number" placeholder='50' className='border border-indigo-700 px-5' />
-                    </div>
-                    <div>
-                        <div className='text-[10px] font-semibold'>Externals Marks</div>
-                        <input ref={refe2} type="number" placeholder='100' className='border border-indigo-700 px-5' />
-                    </div>
-                </div>
-            </div>
-            <div><div className='text-sm font-semibold my-1 mx-12 '>Subject-3:Electrical</div>
-                <div className='flex justify-around'>
-                    <div>
-                        <div className='text-[10px] font-semibold'>Internals Marks</div>
-                        <input ref={refi3} type="number" placeholder='50' className='border border-indigo-700 px-5' />
-                    </div>
-                    <div>
-                        <div className='text-[10px] font-semibold'>Externals Marks</div>
-                        <input ref={refe3} type="number" placeholder='100' className='border border-indigo-700 px-5' />
-                    </div>
-                </div>
-            </div>
-            <div><div className='text-sm font-semibold my-1 mx-12 '>Subject-4:Mechanics</div>
-                <div className='flex justify-around'>
-                    <div>
-                        <div className='text-[10px] font-semibold'>Internals Marks</div>
-                        <input ref={refi4} type="number" placeholder='50' className='border border-indigo-700 px-5' />
-                    </div>
-                    <div>
-                        <div className='text-[10px] font-semibold'>Externals Marks</div>
-                        <input ref={refe4} type="number" placeholder='100' className='border border-indigo-700 px-5' />
-                    </div>
-                </div>
-            </div>
-            <div><div className='text-sm font-semibold my-1 mx-12 '>Subject-5:English</div>
-                <div className='flex justify-around'>
-                    <div>
-                        <div className='text-[10px] font-semibold'>Internals Marks</div>
-                        <input ref={refi5} type="number" placeholder='50' className='border border-indigo-700 px-5' />
-                    </div>
-                    <div>
-                        <div className='text-[10px] font-semibold'>Externals Marks</div>
-                        <input ref={refe5} type="number" placeholder='100' className='border border-indigo-700 px-5' />
-                    </div>
-                </div>
-            </div>
-            <div><div className='text-sm font-semibold my-1 mx-12 '>Subject-6:Physics lab</div>
-                <div className='flex justify-around'>
-                    <div>
-                        <div className='text-[10px] font-semibold'>Internals Marks</div>
-                        <input ref={refi6} type="number" placeholder='50' className='border border-indigo-700 px-5' />
-                    </div>
-                    <div>
-                        <div className='text-[10px] font-semibold'>Externals Marks</div>
-                        <input ref={refe6} type="number" placeholder='100' className='border border-indigo-700 px-5' />
-                    </div>
-                </div>
-            </div>
-            <div><div className='text-sm font-semibold my-1 mx-12 '>Subject-7:Media</div>
-                <div className='flex justify-around'>
-                    <div>
-                        <div className='text-[10px] font-semibold'>Internals Marks</div>
-                        <input ref={refi7} type="number" placeholder='50' className='border border-indigo-700 px-5' />
-                    </div>
-                    <div>
-                        <div className='text-[10px] font-semibold'>Externals Marks</div>
-                        <input ref={refe7} type="number" placeholder='100' className='border border-indigo-700 px-5' />
-                    </div>
-                </div>
-            </div>
-            <div><div className='text-sm font-semibold my-1 mx-12 '>Subject-8:Graphics</div>
-                <div className='flex justify-around'>
-                    <div>
-                        <div className='text-[10px] font-semibold'>Internals Marks</div>
-                        <input ref={refi8} type="number" placeholder='50' className='border border-indigo-700 px-5' />
-                    </div>
-                    <div>
-                        <div className='text-[10px] font-semibold'>Externals Marks</div>
-                        <input ref={refe8} type="number" placeholder='100' className='border border-indigo-700 px-5' />
-                    </div>
-                </div>
-            </div>
-            <div><div className='text-sm font-semibold my-1 mx-12 '>Subject-9:Electrical Lab</div>
-                <div className='flex justify-around'>
-                    <div>
-                        <div className='text-[10px] font-semibold'>Internals Marks</div>
-                        <input ref={refi9} type="number" placeholder='50' className='border border-indigo-700 px-5' />
-                    </div>
-                    <div>
-                        <div className='text-[10px] font-semibold'>Externals Marks</div>
-                        <input ref={refe9} type="number" placeholder='100' className='border border-indigo-700 px-4' />
-                    </div>
-                </div>
-            </div>
-            <button onClick={HandleChange} ref={red} className='bg-green-500 text-white text-xl font-semibold py-3 px-5 rounded-full fixed bottom-2 left-[47%]'>Submit</button>
-        </div>
-        </div>}
-        {(formData>0&&formData<=10) && <><div className='md:fixed md:top-[15%] md:left-[10%] bg-stone-300 md:w-[80%] md:h-[80%] sm:h-screen sm:w-screen'>
-    <div className='w-[60%] md:h-[40%] sm:h-[90%] m-auto md:mt-[15%] gap-8 grid place-items-center sm:flex sm:justify-center '>
-      <div className=''>
-      <div className='text-3xl font-bold m-auto'>Your SGPA is:</div>
-      <div className='text-6xl font-bold sm:text-center m-auto'>{formData}</div>
-      </div></div>
-    </div> </>}
-    
-    </>
-  )
+            </div> </>}
+
+        </>
+    )
 }
 
 export default Page 
